@@ -1,0 +1,19 @@
+#container {
+    font-family: Î¢ÈíÑÅºÚ;
+    width: 600px;
+    border: dotted #900;
+    border-width: 1px 1px;
+    margin: auto;
+}
+
+#header {
+    padding: 1em;
+}
+
+#footer {
+    padding: 1em;
+}
+
+.content {
+    padding: 1em;
+}
