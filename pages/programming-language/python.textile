@@ -1,0 +1,35 @@
+---
+layout: default
+title: Python - Programming-Language
+---
+h1. Python
+
+h3. 开发工具
+* "Python Tools for Visual Studio":http://pytools.codeplex.com/
+* "Eclipse":http://www.eclipse.org/ + "pydev":http://pydev.org/
+* "Aptana":http://aptana.com
+* "NetBeans":http://netbeans.org/
+* "VIM":http://www.vim.org/
+* "Emacs":http://www.gnu.org/software/emacs/
+
+h3. Web开发框架
+* "Django":http://www.djangoproject.com/
+* "Pylons":http://pylonshq.com/
+* "Tenjin":http://www.kuwata-lab.com/tenjin/
+* "TurboGears":http://turbogears.org/
+
+h3. 网络应用
+
+* *CMS*
+** "Plone":http://plone.org/
+
+* *WIKI*
+** "MoinMoinWiki":http://moinmo.in/
+
+h3. 电子书
+* "《简明 Python 教程 - a byte of python》":http://junnan.org/ebooks/a_byte_of_python/
+* "《深入python - dive into python》":http://junnan.org/ebooks/dive_into_python/html/toc/
+* "《深入python3 - dive into python3》":http://junnan.org/ebooks/diveintopython3
+* "《Python编程金典》读书笔记":http://junnan.org/ebooks/Python_How_To_Program_reading_notes.htm
+* "《The Python Tutorial》":http://docs.python.org/tutorial/index.html
+* "《Learn Python The Hard Way》":http://learnpythonthehardway.org/index

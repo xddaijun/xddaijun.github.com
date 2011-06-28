@@ -1,0 +1,76 @@
+---
+layout: default
+title: ActionScript - Programming-Language
+---
+h1. ActionScript
+
+h3. 工具类
+* *Tweener*
+** "Tweening Platform":http://blog.greensock.com
+** "Tweener":http://code.google.com/p/tweener/
+
+* *Audio*
+** "as3soundeditorlib":http://code.google.com/p/as3soundeditorlib
+
+* *Graphic*
+** "graffiti":http://www.nocircleno.com/graffiti/
+** "as3-bitmap-mosaic-class":http://juliankussman.com/blog/2008/10/01/as3-bitmap-mosaic-class
+
+* *Component*
+** "minimalcomps":http://www.minimalcomps.com
+
+* *Other*
+** "CollisionDetectionKit":http://code.google.com/p/collisiondetectionkit/
+** "Casalib":http://casalib.org/
+** "TransformTool":http://www.senocular.com/flash/tutorials/transformtool/
+** "doomsdayconsole(强大的控制台辅助工具)":http://code.google.com/p/doomsdayconsole/
+
+
+h3. 引擎
+* *游戏*
+** "Flixel":http://http://www.flixel.org/
+** "FlashPunk":http://flashpunk.net/
+** "ffilmation":http://www.ffilmation.org
+** "Pixelblitz":http://code.google.com/p/pixelblitz/
+** "PushButton":http://pushbuttonengine.com
+** "Citrus":http://citrusengine.com
+
+* *物理*
+** "Box2DFlash":http://box2dflash.org/
+** "nape":http://code.google.com/p/nape/
+** "APE":http://www.cove.org/ape/index.htm
+** "Flade":http://www.cove.org/flade/
+** "Motor2":http://www.motorphysics.de/
+
+* *3D*
+** "Papervision3D":http://www.papervision3d.org/
+** "Away3D":http://away3d.com/
+** "Alternativa3D":http://alternativaplatform.com/en/alternativa3d/
+** "Flare3d":http://www.flare3d.com/
+
+* *粒子*
+** "Partigen":http://desuade.com/partigen
+** "Flint":http://flintparticles.org
+** "Stardust-Particle":http://code.google.com/p/stardust-particle-engine/
+
+h3. 框架
+* "SomaMVC":http://code.google.com/p/somamvc/
+
+h3. 软件
+* *设计*
+** "MarkMan(马克鳗)":http://www.getmarkman.com/
+
+* *开发*
+** *IDE*
+*** "FlashDevelop":http://www.flashdevelop.org
+*** "Flash Builder":http://www.adobe.com/cn/products/flashbuilder/
+*** "SourceMate(强大的Flash Builder辅助工具)":http://www.elementriver.com/sourcemate3
+*** "FDT":http://www.fdt.powerflasher.com/
+
+** *辅助工具*
+*** "DeMonsterDebugger":http://demonsterdebugger.com/
+*** "Flash FireBug":http://www.o-minds.com/products/flashfirebug
+
+h3. 电子书与手册
+* "优化Flash平台性能(官方PDF中文版)":http://help.adobe.com/zh_CN/as3/mobile/flashplatform_optimizing_content.pdf
+* "ActionScript3参考手册":http://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/

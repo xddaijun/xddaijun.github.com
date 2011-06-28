@@ -1,0 +1,60 @@
+﻿body {
+	background:#000;
+	color: #333;
+	line-height: 1.8em;
+	margin: 0;
+	padding: 0;
+}
+
+body, input, textarea, select {
+	font:14px 'Ubuntu', 'Helvetica Neue', 'Microsoft YaHei','Lucida Grande', 'Lucida Sans Unicode', Verdana, serif;
+}
+
+a {
+	color: #555;
+	text-decoration: none;
+	-webkit-transition: color .5s; 
+}
+a:hover {
+	color: #000;
+}
+
+pre, code, tt { font: 0.9em Monaco, Consolas, 'lucida console', monospace; line-height: 1.5; }
+
+li { padding: 5px 0; }
+
+#logo { font-weight: bold; font-size: 2em; padding-bottom: 10px; }
+
+#container { background: #333; }
+
+#sidebar { float: left; padding: 30px 40px; color: #ddd; }
+#sidebar ul { list-style: none; padding-left: 0; margin-top: 2px; }
+#sidebar ul li { font-size: 14px; font-weight: bold; }
+#sidebar ul li ul { padding-top: 5px; padding-bottom: 5px; list-style: circle; padding-left: 35px; }
+#sidebar ul li ul li { font-weight: normal; }
+#sidebar a { color: #999; }
+#sidebar a:hover { color: #fff; }
+#logo a { color: #ddd; }
+#logo a:hover { color: #777; }
+
+#content { 
+	margin-left: 270px;
+	padding: 12px 40px;
+	background: #ddd; 
+	color: #333; 
+	height: 100%;
+}
+#content ul { 
+	margin-top: 0; margin-bottom: 0;
+}
+#content ul li ul {
+	padding-top: 5px;
+}
+
+.radius {
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#sidebar ul.misc li { font-size: 11px; font-weight: normal; }

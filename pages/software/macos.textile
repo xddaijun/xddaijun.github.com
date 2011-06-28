@@ -1,0 +1,50 @@
+---
+layout: default
+title: Mac OS X - Software
+---
+h1. Mac OS X
+
+h3(#misc). 常用
+* "WBIM for Mac OS X(万寿果五笔输入法，支持临时拼音)":http://www.pawpawsoft.com
+* "Keka(简洁实用的压缩软件)":http://www.kekaosx.com/
+
+h3(#network). 网络
+* "Leech(简洁实用的下载工具)":http://manytricks.com/leech/
+* "Chrome(网页浏览)":http://www.google.com/chrome
+* "Shimo(支持VPN和SSH的客户端软件（支持开机启动和自动连接）)":http://www.chungwasoft.com/shimo/
+* "Transmit(FTP客户端软件)":http://www.panic.com/transmit/
+* "Filezilla(免费FTP软件（客户端和服务端）)":http://filezilla-project.org/
+
+h3(#develop). 开发
+* "TextMate(代码编辑工具)":http://macromates.com/
+* "Coda(支持FTP/SFTP等连接方式的代码编辑工具)":http://www.panic.com/coda/
+** "Tabster(能够使Coda支持多行缩进的插件)":http://code.google.com/p/tabsterforcoda/
+* "Vico(类似于VIM的可视化代码编辑工具)":http://www.vicoapp.com/
+* "Versions(SVN客户端)":http://versionsapp.com/
+* "Cornerstone(SVN客户端)":http://www.zennaware.com/cornerstone/index.php
+* "Github(免费的github官方客户端)":http://mac.github.com
+* "Gitifier(代码库监控器)":http://psionides.github.com/gitifier/Github
+* "Gitbox(Git客户端)":http://www.gitboxapp.com/
+* "Tower(Git客户端)":http://www.git-tower.com/
+* "xmplify(XML编辑器)":http://xmplifyapp.com/
+
+h3(#design). 设计
+* "img2icns(简单实用的图像转成图标小工具)":http://www.img2icnsapp.com/
+
+h3(#productivity). 效率
+* "Alfred(替换系统Spotlight的免费软件，更美观更强大)":http://www.alfredapp.com/
+* "Evernote(免费跨平台网络同步型笔记资料管理软件)":http://evernote.com/
+* "Wunderlist(免费跨平台的任务管理工具)":http://www.6wunderkinder.com/wunderlist/
+* "Anxiety(简洁小巧的任务管理工具)":http://www.anxietyapp.com/
+
+h3(#other). 其他
+* "DoubleCommand(系统键位映射修改工具)":http://doublecommand.sourceforge.net/
+* "Kext Helper(kext安装工具)":http://cheetha.net/
+* "MacPorts(类似于Linux下apt-get或yum的软件包管理工具)":http://www.macports.org/
+* "PropEdit(免费的批量文件权限管理软件)":http://www.eosgarden.com/en/freeware/propedit/
+* "NTFSMounter(可读写NTFS格式分区文件的工具)":http://ntfsmounter.com/
+* "MiniUsage(系统信息显示菜单)":http://homepage.mac.com/nsekine/SYW/software/english/miniusage/index.html
+* "MenuMeters(在托盘栏显示系统硬件信息的工具)":http://www.ragingmenace.com/software/menumeters/
+* "AppCleaner(应用卸载清理工具)":http://www.freemacsoft.net/AppCleaner/
+* "Shiftit(通过快捷键管理窗口布局的小工具)":http://code.google.com/p/shiftit/
+* "Growl(系统托盘提醒工具)":http://growl.info/

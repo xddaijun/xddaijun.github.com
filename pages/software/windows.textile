@@ -1,0 +1,40 @@
+---
+layout: default
+title: Windows - Software
+---
+h1. Windows
+
+h3(#misc). 常用
+* "QQ五笔(QQ五笔，从极点中文转过来后一直使用到现在)":http://wubi.qq.com/
+* "7zip(开源免费的压缩软件)":http://www.7-zip.org/
+* "有道词典(翻译软件)":http://cidian.youdao.com/
+
+h3(#network). 网络
+* "Chrome(网页浏览)":http://www.google.com/chrome
+* "Filezilla(免费FTP软件（客户端和服务端）)":http://filezilla-project.org/
+* "QQ旋风(免费简洁的下载工具)":http://xf.qq.com/
+* "Privoxy(带过滤功能的代理服务器软件)":http://www.privoxy.org/
+* "Tunnelier(实用的SSH客户端软件，支持端口转发)":http://www.bitvise.com/tunnelier
+* "Putty(小巧绿色实用的ssh客户端工具)":http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+* "Fiddler(实用的web调试代理工具)":http://www.fiddler2.com/fiddler2/
+
+h3(#develop). 开发
+* "Notepad++(免费强大的代码编辑工具)":http://notepad-plus-plus.org/
+* "Intype(Windows下的textmate替代软件)":http://intype.info/
+* "TortoiseGit(实用的Git客户端)":http://code.google.com/p/tortoisegit/
+* "TortoiseSVN(实用的Subversion客户端)":http://tortoisesvn.net/
+
+h3(#design). 设计
+* "FastStone Capture(集截图、拾色、屏幕录像、标尺等于一身的实用设计工具)":http://www.faststone.org/
+* "Pencil(跨平台产品原型图设计软件)":http://pencil.evolus.vn/
+
+h3(#productivity). 效率
+* "Evernote(免费跨平台网络同步型笔记资料管理软件)":http://evernote.com/
+* "Wunderlist(免费跨平台的任务管理工具)":http://www.6wunderkinder.com/wunderlist/
+
+h3(#entertainment). 娱乐
+* "Foobar2000(免费简洁实用的音乐播放软件)":http://www.foobar2000.org
+
+h3(#system). 系统
+* "XueTr(内核级系统维护工具)":http://www.xuetr.com/
+* "PowerTool(内核级系统维护工具)":http://code.google.com/p/powertool-google/

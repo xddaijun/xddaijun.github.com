@@ -1,0 +1,11 @@
+---
+layout: default
+title: Index
+---
+h2. Welcome to Xddaijun's Homepage
+
+h3. Contacts
+    <p>Gmail: xddaijun@gmail.com<br><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
