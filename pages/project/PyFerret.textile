@@ -2,9 +2,8 @@
 layout: default
 title: PyFerret
 ---
-<p><a href="https://github.com/xddaijun/PyFerret">PyFerret</a>: Python extension for accessing
-    <a href="http://www.davebalmain.com/">Ferret</a> 
-    </p>
+h2. <a href="https://github.com/xddaijun/PyFerret">PyFerret</a>: Python extension for accessing<a href="http://www.davebalmain.com/">Ferret</a> 
+    
 
 <br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/>
