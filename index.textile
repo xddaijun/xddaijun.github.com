@@ -2,10 +2,12 @@
 layout: default
 title: Index
 ---
-h2. Welcome to Xddaijun's Homepage
+h1. Welcome to Xddaijun's Homepage
 
+h3. Profile
+* 西电研究生在读
 h3. Contacts
-    <p>Gmail: xddaijun@gmail.com<br><br /><br /><br /><br /><br /><br />
+*    <p>Gmail: xddaijun@gmail.com<br><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br />
