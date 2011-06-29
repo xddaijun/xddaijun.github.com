@@ -4,10 +4,63 @@ title: Pinyin to Character
 ---
 h1. Pinyin to Character
 
-
-h3. Contacts
-*    Gmail: xddaijun@gmail.com
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<p>用户输入拼音对拼音进行识别，一向是输入法来做的事情。在这里调用QQ的云端输入法来对输入的拼音进行识别，从而具备很高的匹配率。</p>
+<p>代码如下，详见 &nbsp;<a href="https://github.com/xddaijun/somecode/blob/master/pycharacter/getwords.py">https://github.com/xddaijun/somecode/blob/master/pycharacter/getwords.py</a></p>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"> <p>&nbsp;<span class="Apple-style-span" style="color:#008800;font-family:'[object HTMLOptionElement]', 'Courier New';font-style:italic;line-height:normal;"># -*- coding: utf-8 -*-</span></p>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"><span class="Apple-style-span" style="font-family:'[object HTMLOptionElement]', 'Courier New';line-height:normal;"><span style="color:#0000ff;">"""</span><br />
+<span style="color:#0000ff;">Created on Sat Jun 25 16:37:12 2011</span><br />
+<br />
+<span style="color:#0000ff;">@author: mark</span><br />
+<span style="color:#0000ff;">"""</span><br />
+<br />
+<span style="color:#000000;">from</span>&nbsp;<span style="color:#000000;">urllib</span>&nbsp;<span style="color:#000000;">import</span>&nbsp;<span style="color:#000000;">urlopen</span><br />
+<span style="color:#000000;">import</span>&nbsp;<span style="color:#000000;">json</span><br />
+<span style="color:#000000;">import</span>&nbsp;<span style="color:#000000;">time</span><br />
+<span style="color:#000000;">import</span>&nbsp;<span style="color:#000000;">re</span><br />
+<br />
+<br />
+<span style="color:#000080;font-weight:bold;">def</span>&nbsp;<span style="color:#000000;">getQQWords</span>(<span style="color:#000000;">preword</span><span style="color:#000000;">,</span><span style="color:#000000;">pys</span><span style="color:#000000;">,</span><span style="color:#000000;">curNum</span><span style="color:#000000;">):</span>&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">global</span>&nbsp;<span style="color:#000000;">wordsSet</span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">if</span>(<span style="color:#000000;">len</span>(<span style="color:#000000;">pys</span>)<span style="color:#000000;">&lt;</span><span style="color:#0000ff;">1</span>&nbsp;<span style="font-weight:bold;">and</span>&nbsp;<span style="color:#000000;">preword</span>&nbsp;<span style="font-weight:bold;">not</span>&nbsp;<span style="font-weight:bold;">in</span>&nbsp;<span style="color:#000000;">wordsSet</span><span style="color:#000000;">):</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">wordsSet</span><span style="color:#000000;">.</span><span style="color:#000000;">append</span>(<span style="color:#000000;">preword</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">return</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">if</span>&nbsp;<span style="color:#000000;">curNum</span><span style="color:#000000;">&gt;</span><span style="color:#0000ff;">1</span><span style="color:#000000;">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">nextNum</span><span style="color:#000000;">=</span><span style="color:#000000;">curNum</span><span style="color:#000000;">-</span><span style="color:#0000ff;">1</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">else</span><span style="color:#000000;">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">nextNum</span><span style="color:#000000;">=</span><span style="color:#0000ff;">1</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">pylen</span><span style="color:#000000;">=</span><span style="color:#000000;">len</span>(<span style="color:#000000;">pys</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">sout</span><span style="color:#000000;">=</span><span style="color:#000000;">json</span><span style="color:#000000;">.</span><span style="color:#000000;">load</span>(<span style="color:#000000;">urlopen</span>(<span style="color:#0000ff;">"http://ime.qq.com/fcgi-bin/getword?q=</span><span style="color:#0000ff;">%s</span><span style="color:#0000ff;">"</span>&nbsp;<span style="color:#000000;">%</span>&nbsp;<span style="color:#000000;">pys</span>))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">ix</span><span style="color:#000000;">=</span><span style="color:#0000ff;">0</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">while</span>(<span style="color:#000000;">pylen</span><span style="color:#000000;">&gt;=</span><span style="color:#0000ff;">1</span>&nbsp;<span style="font-weight:bold;">and</span>&nbsp;<span style="color:#000000;">ix</span><span style="color:#000000;">&lt;</span><span style="color:#000000;">curNum</span><span style="color:#000000;">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">getQQWords</span>(<span style="color:#000000;">preword</span><span style="color:#000000;">+</span><span style="color:#000000;">sout</span><span style="color:#000000;">[</span><span style="color:#0000ff;">'rs'</span><span style="color:#000000;">][</span><span style="color:#000000;">ix</span><span style="color:#000000;">],</span><span style="color:#000000;">pys</span><span style="color:#000000;">[</span><span style="color:#000000;">int</span>(<span style="color:#000000;">sout</span><span style="color:#000000;">[</span><span style="color:#0000ff;">'rsn'</span><span style="color:#000000;">][</span><span style="color:#000000;">ix</span><span style="color:#000000;">]):],</span><span style="color:#000000;">nextNum</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">ix</span><span style="color:#000000;">=</span><span style="color:#000000;">ix</span><span style="color:#000000;">+</span><span style="color:#0000ff;">1</span><br />
+<br />
+<span style="color:#000080;font-weight:bold;">def</span>&nbsp;<span style="color:#000000;">parsePY</span>(<span style="color:#000000;">inputStr</span><span style="color:#000000;">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">global</span>&nbsp;<span style="color:#000000;">wordsSet</span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">outwords</span><span style="color:#000000;">=</span><span style="color:#000000;">[]</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">match</span>&nbsp;<span style="color:#000000;">=</span>&nbsp;<span style="color:#000000;">re</span><span style="color:#000000;">.</span><span style="color:#000000;">search</span>(<span style="color:#0000ff;">r'^[a-zA-Z</span><span style="color:#0000ff;">\'</span><span style="color:#0000ff;">\s]+$'</span><span style="color:#000000;">,</span>&nbsp;<span style="color:#000000;">inputStr</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">if</span>&nbsp;<span style="color:#000000;">match</span><span style="color:#000000;">:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">matches</span><span style="color:#000000;">=</span><span style="color:#000000;">re</span><span style="color:#000000;">.</span><span style="color:#000000;">split</span>(<span style="color:#0000ff;">"\s"</span><span style="color:#000000;">,</span><span style="color:#000000;">inputStr</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">ix</span><span style="color:#000000;">=</span><span style="color:#0000ff;">0</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">if</span>&nbsp;<span style="color:#000000;">len</span>(<span style="color:#000000;">matches</span>)<span style="color:#000000;">&gt;</span><span style="color:#0000ff;">1</span><span style="color:#000000;">:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">outwords</span><span style="color:#000000;">.</span><span style="color:#000000;">append</span>(<span style="color:#0000ff;">""</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">while</span>&nbsp;<span style="color:#000000;">ix</span><span style="color:#000000;">&lt;</span><span style="color:#000000;">len</span>(<span style="color:#000000;">matches</span><span style="color:#000000;">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">wordsSet</span><span style="color:#000000;">=</span><span style="color:#000000;">[]</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">getQQWords</span>(<span style="color:#0000ff;">""</span><span style="color:#000000;">,</span><span style="color:#000000;">matches</span><span style="color:#000000;">[</span><span style="color:#000000;">ix</span><span style="color:#000000;">],</span><span style="color:#0000ff;">1</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">outwords</span><span style="color:#000000;">[</span><span style="color:#0000ff;">0</span><span style="color:#000000;">]</span><span style="color:#000000;">=</span><span style="color:#000000;">outwords</span><span style="color:#000000;">[</span><span style="color:#0000ff;">0</span><span style="color:#000000;">]</span><span style="color:#000000;">+</span><span style="color:#000000;">wordsSet</span><span style="color:#000000;">[</span><span style="color:#0000ff;">0</span><span style="color:#000000;">]</span><span style="color:#000000;">+</span><span style="color:#0000ff;">" "</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">ix</span><span style="color:#000000;">=</span><span style="color:#000000;">ix</span><span style="color:#000000;">+</span><span style="color:#0000ff;">1</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">else</span><span style="color:#000000;">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">wordsSet</span><span style="color:#000000;">=</span><span style="color:#000000;">[]</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">getQQWords</span>(<span style="color:#0000ff;">""</span><span style="color:#000000;">,</span><span style="color:#000000;">matches</span><span style="color:#000000;">[</span><span style="color:#000000;">ix</span><span style="color:#000000;">],</span><span style="color:#0000ff;">3</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">outwords</span><span style="color:#000000;">=</span><span style="color:#000000;">wordsSet</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">return</span>&nbsp;<span style="color:#000000;">outwords</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+<br />
+<span style="color:#000080;font-weight:bold;">def</span>&nbsp;<span style="color:#000000;">main</span><span style="color:#000000;">():</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">for</span>&nbsp;<span style="color:#000000;">w</span>&nbsp;<span style="font-weight:bold;">in</span>&nbsp;<span style="color:#000000;">parsePY</span>(<span style="color:#0000ff;">"woshiyigerxi'anshi"</span><span style="color:#000000;">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">print</span>&nbsp;<span style="color:#000000;">w</span><br />
+<br />
+<span style="color:#000080;font-weight:bold;">if</span>&nbsp;<span style="color:#000000;">__name__</span>&nbsp;<span style="color:#000000;">==</span>&nbsp;<span style="color:#0000ff;">'__main__'</span><span style="color:#000000;">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">start</span>&nbsp;<span style="color:#000000;">=</span>&nbsp;<span style="color:#000000;">time</span><span style="color:#000000;">.</span><span style="color:#000000;">clock</span>()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">main</span>()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">end</span>&nbsp;<span style="color:#000000;">=</span>&nbsp;<span style="color:#000000;">time</span><span style="color:#000000;">.</span><span style="color:#000000;">clock</span>()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000080;font-weight:bold;">print</span>&nbsp;<span style="color:#0000ff;">'use time :</span><span style="color:#0000ff;">%f</span><span style="color:#0000ff;">'</span>&nbsp;<span style="color:#000000;">%</span>&nbsp;(<span style="color:#000000;">end</span><span style="color:#000000;">-</span><span style="color:#000000;">start</span>)</span>
