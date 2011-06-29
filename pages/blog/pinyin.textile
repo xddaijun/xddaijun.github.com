@@ -13,7 +13,7 @@ h3. "ibus-cloud-pinyin":http://code.google.com/p/ibus-cloud-pinyin/
 h3. "pinyin4j":http://pinyin4j.sourceforge.net/html/links.html
 *   convert 中文  to zhongwen.pinyin4j是一个支持将中文转换到拼音的Java开源类库。 支持简体中文和繁体中文字符； 支持转换到汉语拼音，通用拼音,威妥玛拼音（威玛拼法）,注音符号。
 
-h3."imewlconverter":http://code.google.com/p/imewlconverter/
+h3. "imewlconverter":http://code.google.com/p/imewlconverter/
 *    IME Words Library Converter/深蓝词库转换实现了各种输入法的用户词库、网络词库（细胞词库）之间的相互转换。
 支持的输入法
 目前支持的输入法有： PC端： 搜狗拼音 QQ拼音 QQ五笔（纯汉字） 谷歌拼音 搜狗五笔 紫光拼音 拼音加加 新浪拼音 极点郑码 自定义格式 手机端： QQ手机拼音 百度手机拼音 触宝手机输入法（Android）
