@@ -18,5 +18,5 @@ h3."imewlconverter":http://code.google.com/p/imewlconverter/
 支持的输入法
 目前支持的输入法有： PC端： 搜狗拼音 QQ拼音 QQ五笔（纯汉字） 谷歌拼音 搜狗五笔 紫光拼音 拼音加加 新浪拼音 极点郑码 自定义格式 手机端： QQ手机拼音 百度手机拼音 触宝手机输入法（Android）
 
-h3. 中文自然语言处理开放平台:http://www.nlp.org.cn/
+h3. "中文自然语言处理开放平台":http://www.nlp.org.cn/
 *    中科院计算机自然语言处理的词库、论文等资料。
