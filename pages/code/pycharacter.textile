@@ -18,7 +18,7 @@ body { font-family: monospace; color: #f8f8f8; background-color: #141414; }
 .Special { color: #4a9400; }
 -->
 </style>
-<pre>
+
 <span class="lnr"> 1 </span><span class="Special"># -*- coding: utf-8 -*-</span>
 <span class="lnr"> 2 </span><span class="String">&quot;&quot;&quot;</span>
 <span class="lnr"> 3 </span><span class="String">Created on Sat Jun 25 16:37:12 2011</span>
@@ -77,7 +77,5 @@ body { font-family: monospace; color: #f8f8f8; background-color: #141414; }
 <span class="lnr">56 </span>    main()
 <span class="lnr">57 </span>    end = time.clock()
 <span class="lnr">58 </span>    print <span class="String">'use time :%f'</span> % (end-start)
-</pre>
-</body>
 
   
