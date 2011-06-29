@@ -4,10 +4,15 @@ title: 中文分词资料
 ---
 h1. 中文分词资料
 
+h3. "pymmseg-cpp":http://code.google.com/p/pymmseg-cpp/
+*    Python 中文分词工具。JavaEye曾经报道过ruby的中文分词程序：rmmseg-cpp这个项目。rmmseg-cpp实际上是用C++来编写的分词，只在最外层和ruby进行了粘合。 现在作者pluskid（张驰原）在rmmseg-cpp的基础上提供了Python的代码封装，可以用在Python项目当中进行中文分词。
 
-h3. Contacts
-*    Gmail: xddaijun@gmail.com
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+h3. "paoding":http://code.google.com/p/paoding/
+*    Lucene中文分词“庖丁解牛” Paoding Analysis,Paoding's Knives 中文分词具有极 高效率 和 高扩展性 。引入隐喻，采用完全的面向对象设计，构思先进。
+高效率：在PIII 1G内存个人机器上，1秒 可准确分词 100万 汉字。
+采用基于 不限制个数 的词典文件对文章进行有效切分，使能够将对词汇分类定义。能够对未知的词汇进行合理解析
+
+h3. "SCWS-1.1.7":http://www.ftphp.com/scws/demo/pscws23/demo.php
+*    这是一套基于词频词典的机械中文分词引擎，它能将一整段的汉字基本正确的切分成词。词是汉语的基本语素单位，而书写的时候不像英语会在词之间用空格分开，所以如何准确而又快速的分词一直是中文分词的攻关难点。SCWS 在概念上并无创新成分，采用的是自行采集的词频词典，并辅以一定程度上的专有名称、人名、地名、数字年代等规则集，经小范围测试大概准确率在 90% ~ 95% 之间，已能基本满足一些中小型搜索引擎、关键字提取等场合运用。 SCWS 采用纯 C 代码开发，以 Unix-Like OS 为主要平台环境，提供共享函数库，方便植入各种现有软件系统。此外它支持 GBK，UTF-8，BIG5 等汉字编码，切词效率高。
+*   文本自动分类建议系统  http://www.ftphp.com/scws/demo/a.php
+*   在线演示：http://www.ftphp.com/scws/demo/pscws23/demo.php
