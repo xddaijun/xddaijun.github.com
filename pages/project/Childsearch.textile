@@ -4,13 +4,14 @@ title: Childsearch
 ---
 h1. Childsearch
 * 专为儿童开发的搜索引擎，主要功能有：
+
 h3. 拼音搜索功能
 h3. 自动对输入关键字分类
 h3. 智能匹配电影、游戏
 h3. 游戏可以自动播放
 h3. "作品展示": http://labs.soso.com/cstar2011/xqtop.html#project_id=9476
 h3. "在线运行": http://113.105.93.45:8000/
-<img src="../../images/childsearch.png"/>
+<img width="600px" src="../../images/childsearch.png"/>
 
 
 h3. Contacts
