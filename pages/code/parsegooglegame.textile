@@ -7,6 +7,7 @@ h1. 读取Googl API页面，并抽取其中的游戏页面
 * 从google的搜索结果队列中读取页面，存放到数据库
 * Google Ajax API 经常就会出现访问错误的情况，不推荐使用 
 * 代码详见:https://github.com/xddaijun/ChildSearch/blob/master/code-client/saveSpecialData.py
+<br/><br/><br/><br/><br/><br/>
 <br/><br/><br/>
 <br/><br/><br/>
 <br/><br/><br/>
