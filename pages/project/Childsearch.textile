@@ -10,8 +10,9 @@ h1. Childsearch
 * 游戏可以自动播放
 
 
-h3. "作品展示": http://labs.soso.com/cstar2011/xqtop.html#project_id=9476
-h3. "在线运行": http://113.105.93.45:8000/
+h3. "作品展示":http://labs.soso.com/cstar2011/xqtop.html#project_id=9476
+
+h3. "在线运行":http://113.105.93.45:8000/
 <img width="600px" src="../../images/childsearch.png"/>
 
 
@@ -19,5 +20,4 @@ h3. Contacts
 *    Gmail: xddaijun@gmail.com
 <br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+
