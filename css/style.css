@@ -1,7 +1,7 @@
 ﻿body {
-	background:#fff;
-	color: #333;
-	line-height: 1.8em;
+    background: #fff url('1') top left fixed;
+    color: #000000;
+    line-height: 1.8em;
 	margin: 0;
 	padding: 0;
 }
@@ -16,7 +16,7 @@ a {
 	-webkit-transition: color .5s; 
 }
 a:hover {
-	color: #000;
+	color:blue;
 }
 
 pre, code, tt { font: 0.9em Monaco, Consolas, 'lucida console', monospace; line-height: 1.5; }
