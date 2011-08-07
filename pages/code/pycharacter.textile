@@ -6,66 +6,6 @@ h1. Pinyin to Character
 
 <p>用户输入拼音对拼音进行识别，一向是输入法来做的事情。在这里调用QQ的云端输入法来对输入的拼音进行识别，从而具备很高的匹配率。</p>
 <p>代码如下，详见 &nbsp;<a href="https://github.com/xddaijun/somecode/blob/master/pycharacter/getwords.py">https://github.com/xddaijun/somecode/blob/master/pycharacter/getwords.py</a></p>
- <div class="source" style="font-family: '[object HTMLOptionElement]', 'Courier New'; color: rgb(246, 243, 232); background-color: rgb(36, 36, 36); "> 
-{% highlight python %}
-# -*- coding: utf-8 -*-
-'''
-Created on Sat Jun 25 16:37:12 2011
-
-@author: mark
-'''
-
-from urllib import urlopen
-import json
-import time
-import re
-
-
-def getQQWords(preword,pys,curNum): 
-    global wordsSet    
-    if(len(pys)<1 and preword not in wordsSet):     
-       wordsSet.append(preword)
-       return
-    if curNum>1:
-        nextNum=curNum-1
-    else:
-        nextNum=1
-    pylen=len(pys)
-    sout=json.load(urlopen("http://ime.qq.com/fcgi-bin/getword?q=%s" % pys))
-    ix=0
-    while(pylen>=1 and ix<curNum):
-        getQQWords(preword+sout['rs'][ix],pys[int(sout['rsn'][ix]):],nextNum)
-        ix=ix+1
-
-def parsePY(inputStr):
-    global wordsSet    
-    outwords=[]
-    match = re.search(r'^[a-zA-Z\'\s]+$', inputStr)
-    if match:        
-        matches=re.split("\s",inputStr)
-        ix=0
-        if len(matches)>1:             
-            outwords.append("")
-            while ix<len(matches):
-                wordsSet=[]
-                getQQWords("",matches[ix],1)
-                outwords[0]=outwords[0]+wordsSet[0]+" "
-                ix=ix+1
-        else:
-            wordsSet=[]
-            getQQWords("",matches[ix],3)
-            outwords=wordsSet
-    return outwords        
-
-def main():
-    for w in parsePY("woshiyigerxi'anshi"):
-        print w
-
-if __name__ == '__main__':
-    start = time.clock()
-    main()
-    end = time.clock()
-   {% endhighlight %} 
-       </div>
+<script src="https://gist.github.com/1130012.js"> </script>
 
   
