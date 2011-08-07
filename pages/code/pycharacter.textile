@@ -6,6 +6,7 @@ h1. Pinyin to Character
 
 <p>用户输入拼音对拼音进行识别，一向是输入法来做的事情。在这里调用QQ的云端输入法来对输入的拼音进行识别，从而具备很高的匹配率。</p>
 <p>代码如下，详见 &nbsp;<a href="https://github.com/xddaijun/somecode/blob/master/pycharacter/getwords.py">https://github.com/xddaijun/somecode/blob/master/pycharacter/getwords.py</a></p>
-<script src="https://gist.github.com/1130012.js"> </script>
+ <div class="source" style="font-family: '[object HTMLOptionElement]', 'Courier New'; color: rgb(246, 243, 232); background-color: rgb(36, 36, 36); "> 
+<script src="https://gist.github.com/1130012.js"> </script>       </div>
 
   
