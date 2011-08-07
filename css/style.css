@@ -16,7 +16,7 @@ a {
 	-webkit-transition: color .5s; 
 }
 a:hover {
-	color:;
+	color:blue;
 }
 
 pre, code, tt { font: 0.9em Monaco, Consolas, 'lucida console', monospace; line-height: 1.5; }
