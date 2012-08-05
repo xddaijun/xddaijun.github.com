@@ -3,7 +3,7 @@ layout: default
 title:  将mmap的思维导图格式的文件转换成为ubuntu下的freemind的mm格式
 ---
 h1. mmap to mm 思维导图文件 
-* windows下的思维导图Mind Manager产生的`.mmap`文件,在Ubuntu下没有替代的软件
+* windows下的思维导图Mind Manager产生的**.mmap**文件,在Ubuntu下没有替代的软件
 * 二者的核心文件还是Document.xml中少了一个头部部分
 * 代码如下，详见:https://github.com/xddaijun/ChildSearch/blob/master/getSoSoData.py
 * 需要依赖 python, python-libxml2, python-libxslt1
