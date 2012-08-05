@@ -1,0 +1,9 @@
+---
+layout: default
+title: Python 一句话抓取百度搜狗的热词 
+---
+h1. Python 一句话抓取百度搜狗的热词 
+* 需要依赖 python, pyquery
+
+<script src="https://gist.github.com/3115077.js?file=hotkeywords.py"></script>
+
