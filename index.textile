@@ -4,8 +4,14 @@ title: Index
 ---
 h1. Welcome to Xddaijun's Homepage
 
+h3. Interest
+* 互联网、新奇想法和一切好玩的东西
+
 h3. Profile
-* 西电研究生在读
+* 2012年4月研究生毕业，互联网公司马农一个
+
+h3. Tags
+* ☑80后 ☑西电☑研三 ☑烟酒僧 ☑无房 ☑无车 ☑C++ ☑Python ☑Vim ☑Kindle ☑悲观 ☑扯淡
 
 h3. Contacts
 *    Gmail: xddaijun@gmail.com
